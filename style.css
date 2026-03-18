@@ -24,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     width: 40vw;
+    gap: 2rem;
 }
 
 img {
@@ -37,7 +38,6 @@ img {
 
 #right-column > div {
     padding: 0rem 2rem;
-    margin: 1rem 0;
 }
 
 .input-label-group {
@@ -47,12 +47,20 @@ img {
 
 form > div {
     display: flex;
-    margin: 1rem 0;
     gap: 3rem; 
 }
 
 #right-column > div:has(form) {
+    height: 35%;
     box-shadow: var(--box-shadow);
+    padding-bottom: 10px; /* form appears to have more top padding because of padding built-in to fonts used in the form, this balances that effect out */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
 }
 
 button {
