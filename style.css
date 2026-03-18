@@ -11,6 +11,8 @@
     --color-brown-dark: #68240f;
     --color-gray-dark: #32373b;
     --color-gray-light: #535c65;
+    --color-primary: black;
+    --color-accent: var(--color-brown-light);
 }
 .container {
     display: flex;
@@ -29,12 +31,13 @@ img {
   height: 100%;
 }
 
-#form-column {
+#right-column {
     flex: 1;
 }
 
-#form-column > div {
-    padding: 1rem 2rem;
+#right-column > div {
+    padding: 0rem 2rem;
+    margin: 1rem 0;
 }
 
 .input-label-group {
@@ -45,18 +48,28 @@ img {
 form > div {
     display: flex;
     margin: 1rem 0;
-    gap: 3rem;
+    gap: 3rem; 
 }
 
-#form-column > div:has(form) {
+#right-column > div:has(form) {
     box-shadow: var(--box-shadow);
 }
 
 button {
-    background-color: var(--color-brown-light);
+    background-color: var(--color-primary);
     color: white;
     padding: 0.5rem 3rem;
     border: none;
     box-shadow: var(--box-shadow);
     border-radius: 7px;
+}
+
+#user-has-account {
+    margin: 0.5rem 0;
+}
+
+#user-has-account::after {
+    content: "Log in";
+    color: var(--color-accent);
+    font-weight: 500;
 }
