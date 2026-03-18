@@ -1,5 +1,19 @@
 @import "./reset-addon.css";
 
+:root{
+    --shadow-color: 0deg 0% 75%;
+    --box-shadow: 0.4px 0.5px 0.7px hsl(var(--shadow-color) / 0.23),
+    1.1px 1.4px 2px -0.8px hsl(var(--shadow-color) / 0.23),
+    2.5px 3.4px 4.7px -1.7px hsl(var(--shadow-color) / 0.23),
+    6.1px 8.2px 11.5px -2.5px hsl(var(--shadow-color) / 0.23),
+    -1px -1px 1px 1px hsl(var(--shadow-color) / 0.23);
+    --color-brown-light: #834122;
+    --color-brown-dark: #68240f;
+    --color-gray-dark: #32373b;
+    --color-gray-light: #535c65;
+    --color-primary: black;
+    --color-accent: var(--color-brown-light);
+}
 .container {
     display: flex;
     height: 100vh;
@@ -9,8 +23,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
     width: 40vw;
+    gap: 2rem;
 }
 
 img {
@@ -18,10 +32,12 @@ img {
   height: 100%;
 }
 
-#form-column {
+#right-column {
     flex: 1;
-    align-items: center;
-    padding: 5vw;
+}
+
+#right-column > div {
+    padding: 0rem 3rem;
 }
 
 .input-label-group {
@@ -31,6 +47,39 @@ img {
 
 form > div {
     display: flex;
-    margin: 1rem;
-    gap: 3rem;
+    gap: 3rem; 
+}
+
+#right-column > div:has(form) {
+    height: auto;
+    box-shadow: var(--box-shadow);
+    padding-bottom: 10px; /* form appears to have more top padding because of padding built-in to fonts used in the form, this balances that effect out */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 3rem;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 7px;
+}
+
+#user-has-account {
+    margin: 0.5rem 0;
+}
+
+#user-has-account::after {
+    content: "Log in";
+    color: var(--color-accent);
+    font-weight: 500;
 }

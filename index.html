@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div>
             <img src="img/pained-nails-vertical.jpg"
-                alt="A woman's hand showing off a mix of jet black and tortoise-shell styled nails." 
-                width="4160"
-                height="6240"/>
+                alt="A woman's hand showing off a mix of jet black and tortoise-shell styled nails." width="4160"
+                height="6240" />
         </div>
-        <div id="form-column">
+        <div id="right-column">
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam temporibus distinctio nisi, rem optio autem. Quasi sint libero exercitationem temporibus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam temporibus distinctio nisi, rem
+                    optio autem. Quasi sint libero exercitationem temporibus.</p>
             </div>
             <div>
-                <form action="example.com/path" method="post">
+                <form method="post" id="form">
+                    <p>Lorem ipsum dolor sit amet.</p>
                     <div>
                         <div class="input-label-group">
                             <label for="first_name">First name</label>
@@ -30,33 +33,37 @@
                             <input type="text" id="last_name" name="last_name">
                         </div>
                     </div>
-
                     <div>
                         <div class="input-label-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email">
                         </div>
-                        
+
                         <div class="input-label-group">
                             <label for="phone">Phone number</label>
                             <input type="tel" id="phone" name="phone_number">
                         </div>
                     </div>
-                    
                     <div>
                         <div class="input-label-group">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password">
                         </div>
-                        
+
                         <div class="input-label-group">
                             <label for="password_confirm">Confirm password</label>
                             <input type="password" id="password_confirm" name="password_confirm">
                         </div>
                     </div>
-
-                    <button type="submit">Submit</button>
                 </form>
+            </div>
+            <div>
+                <div>
+                    <button type="submit" form="form">Create Account</button>
+                </div>
+                <div id="user-has-account">
+                    <span>Already have an account?</span>
+                </div>
             </div>
         </div>
     </div>
