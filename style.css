@@ -23,3 +23,13 @@ img {
     align-items: center;
     padding: 5vw;
 }
+
+.input-label-group {
+    display: flex;
+    flex-direction: column;
+}
+
+form > div {
+    display: flex;
+    gap: 2rem;
+}
