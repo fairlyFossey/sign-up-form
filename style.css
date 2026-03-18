@@ -31,5 +31,6 @@ img {
 
 form > div {
     display: flex;
-    gap: 2rem;
+    margin: 1rem;
+    gap: 3rem;
 }
