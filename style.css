@@ -17,15 +17,16 @@
 .container {
     display: flex;
     height: 100vh;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40vw;
+        gap: 2rem;
+    }
 }
 
-.container > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40vw;
-    gap: 2rem;
-}
 
 img {
   object-fit: cover;
@@ -34,26 +35,22 @@ img {
 
 #right-column {
     flex: 1;
+
+    >div {
+        padding: 0rem 3rem;
+    }
+
+    > div:has(form) {
+        height: auto;
+        box-shadow: var(--box-shadow);
+        padding-bottom: 10px; /* form appears to have more top padding because of padding built-in to fonts used in the form, this balances that effect out */
+    }
 }
 
-#right-column > div {
-    padding: 0rem 3rem;
-}
 
 .input-label-group {
     display: flex;
     flex-direction: column;
-}
-
-form > div {
-    display: flex;
-    gap: 3rem; 
-}
-
-#right-column > div:has(form) {
-    height: auto;
-    box-shadow: var(--box-shadow);
-    padding-bottom: 10px; /* form appears to have more top padding because of padding built-in to fonts used in the form, this balances that effect out */
 }
 
 form {
@@ -63,6 +60,11 @@ form {
     height: 100%;
     padding: 1rem 0;
     gap: 1rem;
+
+    >div {
+        display: flex;
+        gap: 3rem;
+    }
 }
 
 button {
@@ -76,10 +78,10 @@ button {
 
 #user-has-account {
     margin: 0.5rem 0;
-}
 
-#user-has-account::after {
-    content: "Log in";
-    color: var(--color-accent);
-    font-weight: 500;
+    &::after {
+        content: "Log in";
+        color: var(--color-accent);
+        font-weight: 500;
+    }
 }
