@@ -13,6 +13,7 @@
     --color-gray-light: #535c65;
     --color-primary: black;
     --color-accent: var(--color-brown-light);
+    --color-translucent-black: rgb(0 0 0 / 25%);
 }
 
 body {
@@ -28,6 +29,37 @@ body {
     }
 }
 
+#left-column {
+    position: relative;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .shaded-background {
+        position: absolute;
+        width: 100%;
+        background: var(--color-translucent-black);
+        bottom: 64%; /* 'bottom' ensures img focal point can't be clipped by content growing */
+        text-align: center;
+    }
+
+    .img-attribution {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 1%;
+    }
+
+    span {
+        color: white;
+    }
+}
+
+
 #right-column {
     flex: 1;
 
@@ -38,7 +70,8 @@ body {
     >div:has(form) {
         height: auto;
         box-shadow: var(--box-shadow);
-        padding-bottom: 10px; /* form appears to have more top padding because of padding built-in to fonts used in the form, this balances that effect out */
+        /* counteracts the pseudo-padding that text can give to the top of parent containers */
+        padding-bottom: 10px; 
     }
 }
 
@@ -69,11 +102,6 @@ form {
         color: var(--color-accent);
         font-weight: 500;
     }
-}
-
-img {
-  object-fit: cover;
-  height: 100%;
 }
 
 button {
