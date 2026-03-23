@@ -14,7 +14,7 @@
     --color-primary: black;
     --color-accent: var(--color-brown-light);
 }
-.container {
+body {
     display: flex;
     height: 100vh;
 
