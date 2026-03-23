@@ -1,6 +1,6 @@
 @import "./reset-addon.css";
 
-:root{
+:root {
     --shadow-color: 0deg 0% 75%;
     --box-shadow: 0.4px 0.5px 0.7px hsl(var(--shadow-color) / 0.23),
     1.1px 1.4px 2px -0.8px hsl(var(--shadow-color) / 0.23),
@@ -14,6 +14,7 @@
     --color-primary: black;
     --color-accent: var(--color-brown-light);
 }
+
 body {
     display: flex;
     height: 100vh;
@@ -27,12 +28,6 @@ body {
     }
 }
 
-
-img {
-  object-fit: cover;
-  height: 100%;
-}
-
 #right-column {
     flex: 1;
 
@@ -40,17 +35,11 @@ img {
         padding: 0rem 3rem;
     }
 
-    > div:has(form) {
+    >div:has(form) {
         height: auto;
         box-shadow: var(--box-shadow);
         padding-bottom: 10px; /* form appears to have more top padding because of padding built-in to fonts used in the form, this balances that effect out */
     }
-}
-
-
-.input-label-group {
-    display: flex;
-    flex-direction: column;
 }
 
 form {
@@ -65,15 +54,11 @@ form {
         display: flex;
         gap: 3rem;
     }
-}
 
-button {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 0.5rem 3rem;
-    border: none;
-    box-shadow: var(--box-shadow);
-    border-radius: 7px;
+    .input-label-group {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #user-has-account {
@@ -85,3 +70,18 @@ button {
         font-weight: 500;
     }
 }
+
+img {
+  object-fit: cover;
+  height: 100%;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 3rem;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 7px;
+}
+
