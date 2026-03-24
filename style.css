@@ -1,4 +1,8 @@
 @import "./reset-addon.css";
+@font-face {
+    font-family: Boreal;
+    src: url(./font/Borel-Regular.woff2);
+}
 
 :root {
     --shadow-color: 0deg 0% 75%;
@@ -46,6 +50,7 @@ body {
         background: var(--color-translucent-black);
         bottom: 64%; /* 'bottom' ensures img focal point can't be clipped by content growing */
         display: flex;
+        padding: 0.5rem;
      
         #logo-name-pkg {
             margin-left: auto;
@@ -67,6 +72,8 @@ body {
         #company-name {
             color: white;
             font-size: 4rem;
+            font-family: "Boreal";
+            margin-bottom: -3.7rem;
         }
 
     }
