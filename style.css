@@ -46,12 +46,17 @@ body {
         background: var(--color-translucent-black);
         bottom: 64%; /* 'bottom' ensures img focal point can't be clipped by content growing */
         display: flex;
-        justify-content: center;
-        align-items: center;
+     
+        #logo-name-pkg {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
         .logo-container {
-            height: 10rem;
-            /* position: absolute; */
+            height: 5rem;
         }
 
         img {
@@ -59,8 +64,9 @@ body {
             height: 100%;
         }
 
-        p {
+        #company-name {
             color: white;
+            font-size: 4rem;
         }
 
     }
