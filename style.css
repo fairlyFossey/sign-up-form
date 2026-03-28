@@ -24,22 +24,15 @@
 body {
     display: flex;
     height: 100vh;
-
-    >div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 40vw;
-        gap: 2rem;
-    }
 }
 
 .left-column {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: end;
-
+    position: relative;
+    width: 40vw;
+   
     >img {
         object-fit: cover;
         height: 100%;
@@ -100,15 +93,17 @@ body {
         color: white;
     }
 
-     a:visited {
+    a:visited {
         color: var(--color-link-visited);
     }
-
-   
 }
 
 
 .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
     flex: 1;
 
     >div {
@@ -121,43 +116,42 @@ body {
         /* counteracts the pseudo-padding that text can give to the top of parent containers */
         padding-bottom: 10px; 
     }
-}
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    padding: 1rem 0;
-    gap: 1rem;
-
-    >div {
-        display: flex;
-        gap: 3rem;
-    }
-
-    .input-label-group {
+    form {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        padding: 1rem 0;
+        gap: 1rem;
+
+        >div {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .input-label-group {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    button {
+        background-color: var(--color-primary);
+        color: white;
+        padding: 0.5rem 3rem;
+        border: none;
+        box-shadow: var(--box-shadow);
+        border-radius: 7px;
+    }
+
+    .user-has-account {
+        margin: 0.5rem 0;
+
+        &::after {
+            content: "Log in";
+            color: var(--color-accent);
+            font-weight: 500;
+        }
     }
 }
-
-.user-has-account {
-    margin: 0.5rem 0;
-
-    &::after {
-        content: "Log in";
-        color: var(--color-accent);
-        font-weight: 500;
-    }
-}
-
-button {
-    background-color: var(--color-primary);
-    color: white;
-    padding: 0.5rem 3rem;
-    border: none;
-    box-shadow: var(--box-shadow);
-    border-radius: 7px;
-}
-
