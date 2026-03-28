@@ -34,7 +34,7 @@ body {
     }
 }
 
-#left-column {
+.left-column {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@ body {
         display: flex;
         padding: 0.5rem;
      
-        #logo-name-pkg {
+        .logo-name-pkg {
             margin-left: auto;
             margin-right: auto;
             display: flex;
@@ -73,7 +73,7 @@ body {
             height: 100%;
         }
 
-        #company-name {
+        .company-name {
             color: white;
             font-size: 4rem;
             font-family: "Boreal";
@@ -82,7 +82,7 @@ body {
 
     }
 
-    #img-attribution-container {
+    .img-attribution-container {
         display: flex;
     }
 
@@ -108,7 +108,7 @@ body {
 }
 
 
-#right-column {
+.right-column {
     flex: 1;
 
     >div {
@@ -142,7 +142,7 @@ form {
     }
 }
 
-#user-has-account {
+.user-has-account {
     margin: 0.5rem 0;
 
     &::after {
