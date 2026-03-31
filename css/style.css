@@ -1,7 +1,7 @@
 @import "./reset-addon.css";
 @font-face {
     font-family: Boreal;
-    src: url(./font/Borel-Regular.woff2);
+    src: url(../font/Borel-Regular.woff2);
 }
 
 :root {
