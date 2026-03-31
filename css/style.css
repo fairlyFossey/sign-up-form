@@ -134,6 +134,21 @@ body {
             display: flex;
             flex-direction: column;
         }
+
+        input {
+            outline: none;
+            border: solid 1px #E5E7EB;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border: 1px solid #3f3fad;
+            box-shadow: var(--box-shadow);
+        }
+
+        .password-field:invalid {
+            border: 1px solid red;
+        }
     }
 
     button {

@@ -75,12 +75,15 @@
                 <div>
                     <div class="input-label-group">
                         <label for="password" required>Password</label>
-                        <input type="password" id="password" name="password">
+                        <!-- Regex specifies that character length must be between 5-20  -->
+                        <input type="password" id="password" name="password" 
+                            class="password-field" pattern="^.{5,20}$">
                     </div>
 
                     <div class="input-label-group">
                         <label for="password_confirm" required>Confirm password</label>
-                        <input type="password" id="password_confirm" name="password_confirm">
+                        <input type="password" id="password_confirm" name="password_confirm" 
+                            class="password-field" pattern="^.{5,20}$">
                     </div>
                 </div>
             </form>
