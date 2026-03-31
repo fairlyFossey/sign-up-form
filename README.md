@@ -6,6 +6,7 @@ You can learn about the assignment [here](https://www.theodinproject.com/lessons
 
 ### Roadmap
 - ✅~~Add dynamic borders to input fields~~
+- Add icons to invalid form fields to assist colorblind people
 - Style promotional paragraph
 - Replace any dummy text content
 - Final visual touches
