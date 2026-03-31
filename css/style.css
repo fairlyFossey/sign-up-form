@@ -135,6 +135,11 @@ body {
             flex-direction: column;
         }
 
+        /* selects labels of required fields */
+        label:has(+ input:required):after {
+            content: "*";
+        }
+
         input {
             outline: none;
             border: solid 1px #E5E7EB;
