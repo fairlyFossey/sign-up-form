@@ -1,6 +1,6 @@
 @import "./reset-addon.css";
 @font-face {
-    font-family: Boreal;
+    font-family: Borel;
     src: url(../font/Borel-Regular.woff2);
 }
 
@@ -45,7 +45,8 @@ body {
         width: 100%;
         height: auto;
         background: var(--color-translucent-black);
-        bottom: 64%; /* 'bottom' ensures img focal point can't be clipped by content growing */
+        /* bottom-positioning ensures img focal point can't be clipped by content growing */
+        bottom: 64%; 
         display: flex;
         padding: 0.5rem;
      
@@ -58,7 +59,7 @@ body {
         }
 
         .logo-container {
-            height: 5rem;
+            height: 15vh;
         }
 
         img {
@@ -68,9 +69,10 @@ body {
 
         .company-name {
             color: white;
-            font-size: 4rem;
-            font-family: "Boreal";
-            margin-bottom: -3.7rem;
+            font-size: 12vh;
+            font-family: "Borel";
+            /* Bottom margin offsets padding quirks built in to Borel font */
+            margin-bottom: -12vh;
         }
 
     }
