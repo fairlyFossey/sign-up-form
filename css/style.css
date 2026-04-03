@@ -143,6 +143,10 @@ body {
             flex-direction: column;
         }
 
+        label {
+            font-weight: 500;
+        }
+
         /* selects labels of required fields */
         label:has(+ input:required):after {
             content: "*";
@@ -152,6 +156,7 @@ body {
             outline: none;
             border: solid 1px #E5E7EB;
             border-radius: 4px;
+            width: 35ch;
         }
 
         input:focus {
