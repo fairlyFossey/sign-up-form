@@ -119,6 +119,11 @@ body {
         padding-bottom: 10px; 
     }
 
+    p {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -126,6 +131,11 @@ body {
         height: 100%;
         padding: 1rem 0;
         gap: 1rem;
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
 
         >div {
             display: flex;
