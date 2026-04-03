@@ -165,7 +165,7 @@ body {
             box-shadow: var(--box-shadow);
         }
 
-        .password-field:invalid {
+        .password-field:user-invalid {
             border: 1px solid red;
         }
     }
