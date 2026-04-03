@@ -111,11 +111,11 @@ body {
     >div:has(form) {
         height: auto;
         box-shadow: var(--box-shadow);
-        /* counteracts the pseudo-padding that text can give to the top of parent containers */
+        /* bottom padding counteracts the pseudo-padding that text can give to the top of parent containers */
         padding-bottom: 10px; 
     }
 
-    p {
+    .promotional-text {
         font-size: 1.5rem;
         font-weight: 700;
     }
